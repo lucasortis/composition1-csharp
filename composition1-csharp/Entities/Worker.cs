@@ -36,7 +36,7 @@ namespace composition1_csharp.Entities
             Contracts.Remove(contract);
         }
 
-        public double Income(int year, int month)
+        public double Income(int month, int year)
         {
             double sum = BaseSalary;
 
