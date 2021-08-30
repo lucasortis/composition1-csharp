@@ -20,10 +20,15 @@ namespace composition1_csharp
             Console.Write("Base Salary: ");
             double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Worker worker = new Worker(name, level, baseSalary);
+            //Worker worker = new Worker(name, level, baseSalary, department);
 
             Console.Write("How many contracts to this worker? ");
             int n = int.Parse(Console.ReadLine());
+
+      
+
+          
+            }
 
 
         }
