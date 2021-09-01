@@ -1,24 +1,24 @@
 ﻿using System;
-using System.Globalization;
 using System.Collections.Generic;
 using composition1_csharp.Entities.Enums;
 
+
 namespace composition1_csharp.Entities
 {
-    class Worker
+    class Workers
     {
         public string Name { get; set; }
         public WorkerLevel Level { get; set; }
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
-        public List<HourContract> Contracts { get; set; } = new List<HourContract>();
+        public List<HourContract> Contracts = new List<HourContract>();
 
-        public Worker()
+        public Workers()
         {
 
         }
 
-        public Worker(string name, WorkerLevel level, double baseSalary, Department department)
+        public Workers(string name, WorkerLevel level, double baseSalary, Department department)
         {
             Name = name;
             Level = level;
@@ -28,7 +28,7 @@ namespace composition1_csharp.Entities
 
         public void AddContract(HourContract contract)
         {
-            Contracts.Add(contract);   
+            Contracts.Add(contract);
         }
 
         public void RemoveContract(HourContract contract)
@@ -39,10 +39,9 @@ namespace composition1_csharp.Entities
         public double Income(int month, int year)
         {
             double sum = BaseSalary;
-
             foreach(HourContract contract in Contracts)
             {
-                if(contract.Date.Year == year && contract.Date.Month == month)
+                if(contract.Date.Month == month && contract.Date.Year == year)
                 {
                     sum += contract.TotalValue();
                 }

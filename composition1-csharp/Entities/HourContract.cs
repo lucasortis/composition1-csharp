@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace composition1_csharp.Entities
 {
@@ -10,6 +14,7 @@ namespace composition1_csharp.Entities
 
         public HourContract()
         {
+
         }
 
         public HourContract(DateTime date, double valuePerHour, int hours)
@@ -21,7 +26,7 @@ namespace composition1_csharp.Entities
 
         public double TotalValue()
         {
-            return ValuePerHour * Hours;
+            return Hours * ValuePerHour;
         }
     }
 }

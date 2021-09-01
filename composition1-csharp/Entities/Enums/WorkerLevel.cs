@@ -1,6 +1,12 @@
-﻿namespace composition1_csharp.Entities.Enums
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace composition1_csharp.Entities.Enums
 {
-    enum WorkerLevel : int
+    enum WorkerLevel: int
     {
         Junior = 0,
         MidLevel = 1,
